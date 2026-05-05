@@ -1,0 +1,20 @@
+name: Hello GitHub Actions
+
+on: push
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print hello message
+        run: echo "Hello! GitHub Actions is working."
+
+      - name: Print runner OS
+        run: echo "This job is running on ${{ runner.os }}"
+
+      - name: Print repository name
+        run: echo "Repository is ${{ github.repository }}"
+
+      - name: Print event name
+        run: echo "Triggered by ${{ github.event_name }}"
